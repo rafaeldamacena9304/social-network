@@ -41,22 +41,6 @@ A aplicação permite registro e autenticação de usuários, criação de posts
 
 ---
 
-## 📁 Estrutura de Pastas
-
-```
-root/
-├── backend/               # Código Django + DRF
-│   ├── app/               # Aplicação principal (views, serializers, models)
-│   ├── project/           # Configurações do Django (settings, urls)
-│   └── manage.py
-├── frontend/              # Código React
-│   ├── src/
-│   ├── public/
-│   └── package.json
-└── README.md              # Este arquivo
-```
-
----
 
 ## ⚙️ Como Executar o Projeto
 
@@ -70,10 +54,11 @@ cd sns-drf-react
 ### 2. Configurar o Backend (Django)
 
 ```bash
-cd backend
+cd social_network_backend
 python -m venv venv
 source venv/bin/activate    # Windows: `venv\Scripts\activate`
 pip install -r requirements.txt
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
@@ -83,12 +68,12 @@ O backend estará disponível em `http://127.0.0.1:8000/`.
 ### 3. Configurar o Frontend (React)
 
 ```bash
-cd ../frontend
+cd social_network_frontend
 npm install
-npm start
+npm run dev
 ```
 
-O frontend abrirá em `http://localhost:3000/` e fará consumo da API do backend.
+O frontend abrirá em `http://localhost:5173/` e fará consumo da API do backend.
 
 ---
 
@@ -117,7 +102,6 @@ O frontend abrirá em `http://localhost:3000/` e fará consumo da API do backend
 - **Feed**: exibe lista de posts com filtro.
 - **Profile**: detalhes do usuário e lista de seus posts.
 - **PostForm**: criação de novas publicações.
-- **Navbar**: navegação entre páginas.
 
 ---
 
