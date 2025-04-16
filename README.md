@@ -47,7 +47,7 @@ A aplicação permite registro e autenticação de usuários, criação de posts
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/sns-drf-react.git
+git clone https://github.com/rafaeldamacena9304/social-network.git
 cd sns-drf-react
 ```
 
